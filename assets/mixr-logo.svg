@@ -1,0 +1,105 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 560" width="1600" height="560">
+  <defs>
+    <linearGradient id="word" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2fb4ff"/>
+      <stop offset="0.55" stop-color="#a66bff"/>
+      <stop offset="1" stop-color="#ff3d63"/>
+    </linearGradient>
+    <radialGradient id="page" cx="0.3" cy="0.2" r="1.1">
+      <stop offset="0" stop-color="#151b2c"/>
+      <stop offset="1" stop-color="#07080b"/>
+    </radialGradient>
+    <filter id="tglow" x="-10%" y="-30%" width="120%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="560" fill="url(#page)"/>
+  <svg x="60" y="40" width="480" height="480" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2fb4ff"/>
+      <stop offset="0.55" stop-color="#a66bff"/>
+      <stop offset="1" stop-color="#ff3d63"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2fb4ff"/>
+      <stop offset="0.5" stop-color="#a66bff"/>
+      <stop offset="1" stop-color="#ff3d63"/>
+    </linearGradient>
+    <radialGradient id="bg" cx="0.5" cy="0.32" r="0.8">
+      <stop offset="0" stop-color="#1a2136"/>
+      <stop offset="1" stop-color="#07080b"/>
+    </radialGradient>
+    <radialGradient id="vinyl" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#1b2130"/>
+      <stop offset="0.7" stop-color="#0d1017"/>
+      <stop offset="1" stop-color="#151a25"/>
+    </radialGradient>
+    <radialGradient id="label" cx="0.38" cy="0.32" r="0.8">
+      <stop offset="0" stop-color="#7fd6ff"/>
+      <stop offset="0.45" stop-color="#2fb4ff"/>
+      <stop offset="1" stop-color="#6a3cff"/>
+    </radialGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="disc"><circle cx="256" cy="256" r="172"/></clipPath>
+  </defs>
+
+  <!-- app tile -->
+  <rect x="8" y="8" width="496" height="496" rx="112" fill="url(#bg)"/>
+  <rect x="8.5" y="8.5" width="495" height="495" rx="111.5" fill="none" stroke="#ffffff" stroke-opacity="0.06"/>
+
+  <!-- vinyl -->
+  <circle cx="256" cy="256" r="186" fill="none" stroke="url(#neon)" stroke-width="12" filter="url(#glow)"/>
+  <circle cx="256" cy="256" r="172" fill="url(#vinyl)"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="2">
+    <circle cx="256" cy="256" r="152"/><circle cx="256" cy="256" r="134"/>
+    <circle cx="256" cy="256" r="116"/><circle cx="256" cy="256" r="98"/><circle cx="256" cy="256" r="80"/>
+  </g>
+  <!-- light sheen on the grooves -->
+  <path d="M 140 150 A 150 150 0 0 1 300 112" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- sound wave running through the record -->
+  <g clip-path="url(#disc)" filter="url(#softglow)">
+    <g fill="url(#wave)">
+      <rect x="92"  y="246" width="10" height="20"  rx="5"/>
+      <rect x="110" y="236" width="10" height="40"  rx="5"/>
+      <rect x="128" y="222" width="10" height="68"  rx="5"/>
+      <rect x="146" y="200" width="10" height="112" rx="5"/>
+      <rect x="164" y="214" width="10" height="84"  rx="5"/>
+      <rect x="182" y="180" width="10" height="152" rx="5"/>
+      <rect x="320" y="180" width="10" height="152" rx="5"/>
+      <rect x="338" y="208" width="10" height="96"  rx="5"/>
+      <rect x="356" y="192" width="10" height="128" rx="5"/>
+      <rect x="374" y="226" width="10" height="60"  rx="5"/>
+      <rect x="392" y="238" width="10" height="36"  rx="5"/>
+      <rect x="410" y="247" width="10" height="18"  rx="5"/>
+    </g>
+  </g>
+
+  <!-- centre label -->
+  <circle cx="256" cy="256" r="58" fill="url(#label)" filter="url(#glow)"/>
+  <circle cx="256" cy="256" r="58" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2"/>
+  <circle cx="256" cy="256" r="10" fill="#07080b"/>
+  <!-- stylus mark -->
+  <rect x="251" y="96" width="10" height="44" rx="5" fill="#ff3d63" filter="url(#softglow)"/>
+
+  <!-- AI sparkle -->
+  <g transform="translate(398 112)" filter="url(#glow)">
+    <path d="M0 -38 C 5 -10 10 -5 38 0 C 10 5 5 10 0 38 C -5 10 -10 5 -38 0 C -10 -5 -5 -10 0 -38 Z" fill="url(#neon)"/>
+    <path d="M0 -38 C 5 -10 10 -5 38 0 C 10 5 5 10 0 38 C -5 10 -10 5 -38 0 C -10 -5 -5 -10 0 -38 Z" fill="#ffffff" fill-opacity="0.25"/>
+  </g>
+  <g transform="translate(440 168)"><path d="M0 -12 C 2 -3 3 -2 12 0 C 3 2 2 3 0 12 C -2 3 -3 2 -12 0 C -3 -2 -2 -3 0 -12 Z" fill="#ffffff" fill-opacity="0.85"/></g>
+</svg>
+  <text x="600" y="318" font-family="Segoe UI Black, Arial Black, Inter, sans-serif" font-weight="900" font-size="210" letter-spacing="-6" fill="#ffffff">MIXR</text>
+  <text x="1170" y="318" font-family="Segoe UI Black, Arial Black, Inter, sans-serif" font-weight="900" font-size="210" letter-spacing="-4" fill="url(#word)" filter="url(#tglow)">AI</text>
+  <rect x="606" y="352" width="900" height="6" rx="3" fill="url(#word)" opacity="0.85"/>
+  <text x="608" y="420" font-family="Segoe UI Semibold, Segoe UI, Arial, sans-serif" font-weight="600" font-size="33" letter-spacing="7.5" fill="#b8c0d3">YOUR MUSIC. YOUR MIX. YOUR RULES.</text>
+</svg>
