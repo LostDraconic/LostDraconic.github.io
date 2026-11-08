@@ -32,6 +32,13 @@
   .btn { display:inline-flex; align-items:center; gap:10px; padding:15px 28px; border-radius:12px; font-weight:600; font-size:17px; text-decoration:none; color:#fff;
     background:linear-gradient(90deg,#1690d6,#8b3fe0); box-shadow:0 8px 30px rgba(140,70,240,.35); }
   .btn:hover { filter:brightness(1.1); }
+  .btn2 { background:transparent; border:1px solid var(--line); box-shadow:none; margin-left:10px; }
+  .btn2:hover { border-color:var(--a); }
+  @media (max-width:640px) { .btn2 { margin:12px 0 0; } }
+  .compare { width:100%; border-collapse:collapse; font-size:15px; }
+  .compare th, .compare td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); }
+  .compare th { color:var(--dim); font-weight:600; font-size:13px; text-transform:uppercase; letter-spacing:1px; }
+  .compare td.y { color:#3dffb0; } .compare td.n { color:var(--dim); }
   .meta { color:var(--dim); font-size:13px; margin-top:12px; }
   .shot { margin:44px auto 0; border-radius:14px; overflow:hidden; border:1px solid var(--line); box-shadow:0 30px 80px rgba(0,0,0,.6), 0 0 120px rgba(34,184,255,.08); }
   .shot img { display:block; width:100%; height:auto; }
@@ -67,7 +74,7 @@
 <div class="wrap">
   <nav>
     <a class="brand" href="#"><img src="assets/mixr-icon.svg" alt="">MIXR AI</a>
-    <div class="links"><a href="#features">Features</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="#download">Download</a></div>
+    <div class="links"><a href="#features">Features</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="app/" style="color:var(--text)">Try in browser</a><a href="#download">Download</a></div>
   </nav>
 
   <header class="hero">
@@ -77,7 +84,8 @@
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.4 4.5v7H3zm8.3-1.1L21 3v8.5h-9.7zM3 12.5h7.4v7L3 18.5zm8.3 0H21V21l-9.7-1.4z"/></svg>
       Download for Windows
     </a>
-    <div class="meta">Free · v0.1.0 · Windows 10/11 (64-bit) · 165 MB</div>
+    <a class="btn btn2" href="app/">▶ Try it in your browser</a>
+    <div class="meta">Free · v0.1.0 · Windows 10/11 (64-bit) · 165 MB · or run it instantly in Chrome / Edge, no install</div>
     <div class="shot"><img src="assets/autopilot.png" alt="MIXR AI performing an AI bass-swap transition between two tracks" width="2400" height="1500"></div>
     <div class="caption">The AI in the middle of a bass swap: it locked the tempos, killed the incoming lows, and will swap the bass on the downbeat.</div>
   </header>
@@ -109,6 +117,25 @@
     </ol>
   </section>
 
+  <section id="web">
+    <h2>Try it in your browser</h2>
+    <p class="sub">The full mixer and AI DJ run inside the web page. Load the 8 demo tracks or drag in your own songs. They're analysed on your computer and stay in your browser; nothing is uploaded.</p>
+    <a class="btn" href="app/">▶ Open MIXR AI in the browser</a>
+    <div class="meta" style="margin-bottom:24px">Best on a laptop or desktop in Chrome or Edge.</div>
+    <div class="card" style="padding:8px 14px">
+      <table class="compare">
+        <tr><th></th><th>Browser</th><th>Windows app</th></tr>
+        <tr><td>AI DJ, all transitions, Transition Lab, timeline editor, setlists</td><td class="y">✓</td><td class="y">✓</td></tr>
+        <tr><td>Upload and analyse your own music</td><td class="y">✓</td><td class="y">✓</td></tr>
+        <tr><td>Record &amp; export WAV / MP3</td><td class="y">✓</td><td class="y">✓</td></tr>
+        <tr><td>DJ controllers (MIDI)</td><td class="y">✓ Chrome / Edge</td><td class="y">✓</td></tr>
+        <tr><td>Stem separation (vocals / drums / bass)</td><td class="n">—</td><td class="y">✓</td></tr>
+        <tr><td>Song requests from guests' phones</td><td class="n">—</td><td class="y">✓</td></tr>
+        <tr><td>Works offline, large libraries</td><td class="n">—</td><td class="y">✓</td></tr>
+      </table>
+    </div>
+  </section>
+
   <section id="req">
     <h2>System requirements</h2>
     <div class="req" style="margin-top:20px">
@@ -124,8 +151,8 @@
     <details><summary>Windows says "Windows protected your PC". Is it safe?</summary><p>MIXR AI is new and not code-signed yet, so Microsoft SmartScreen shows a warning the first time. Click <b>More info → Run anyway</b>.</p></details>
     <details><summary>Is it free?</summary><p>Yes. MIXR AI is free to download and use.</p></details>
     <details><summary>Does it work with Spotify, Apple Music or YouTube?</summary><p>No. Those services encrypt their audio and their terms forbid mixing it in DJ apps. MIXR works with music files you own, such as purchases from Bandcamp or Beatport, your own productions, or royalty-free libraries.</p></details>
-    <details><summary>Is there a Mac version?</summary><p>Not yet. MIXR AI is Windows-only for now.</p></details>
-    <details><summary>Does my music get uploaded anywhere?</summary><p>No. All analysis and mixing happens on your computer. MIXR doesn't need an account and doesn't upload your songs. Song requests run only on your local network.</p></details>
+    <details><summary>Is there a Mac version?</summary><p>There's no Mac app yet, but the <a href="app/">browser version</a> runs on a Mac in Chrome or Edge.</p></details>
+    <details><summary>Does my music get uploaded anywhere?</summary><p>No. In both the app and the browser version, all analysis and mixing happens on your own computer. MIXR doesn't need an account and never uploads your songs. In the browser version your library is saved in that browser, so clearing your site data removes it.</p></details>
     <details><summary>My controller isn't listed. Will it work?</summary><p>Most MIDI DJ controllers work. Use the Controllers tab: it detects your device, and MIDI Learn lets you map any knob, fader or button in a few seconds.</p></details>
   </section>
 
